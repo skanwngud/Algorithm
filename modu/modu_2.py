@@ -20,3 +20,17 @@ def sum_nn(n):
 print(sum_110(1, 10)) # 55
 print(sum_n(10)) # 55
 print(sum_nn(10)) # 55
+
+# 연습문제
+def practice_1(n):
+    sum = 0
+    for i in range(1, n+1):
+        sum += i * i
+    return sum
+
+print(practice_1(10)) # 385
+
+def practice_2(n):
+    return n * (n+1) * (2 * n + 1) // 6
+
+print(practice_2(10)) # 385
