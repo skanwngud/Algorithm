@@ -46,4 +46,12 @@ def find_min(n):
     b = np.sort(n)
     return b[0]
 
+def find_min_book(n):
+    a = len(n)
+    min_v = 0
+    for i in range(a):
+        if n[i] < n[min_v]:
+            min_v = i
+    return min_v
+
 print(find_min(a)) # 7
