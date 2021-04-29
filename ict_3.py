@@ -7,7 +7,7 @@ def ict(n):
     for i in range(len(n)):
         if n[i] <= 1:
             n[i + 1] += n[i]
-             
+
 
 
 # 강의 해답
