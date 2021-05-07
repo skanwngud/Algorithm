@@ -19,3 +19,5 @@ print(solution(gems))
 for g in zip(gems):
     if g != gems:
         print(g)
+
+        
