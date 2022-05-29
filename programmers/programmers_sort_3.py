@@ -1,3 +1,4 @@
+
 def solution(numbers):
     answer = 0
     numbers = sorted(numbers)
@@ -26,3 +27,12 @@ if __name__ == "__main__":
     print('1', solution(numbers))
     print('2', solution2(numbers))
     print(solution3(numbers))
+# H-Index
+
+def solution(numbers):
+    answer = 0
+    numbers = sorted(numbers)
+    for idx in range(len(numbers)):
+        if numbers[idx] <= len(numbers) - idx:
+            answer = numbers[idx]
+    return answer
