@@ -7,8 +7,10 @@ def solution(paragraph, banned):
     words = [word for word in re.sub(r'[^\w]', ' ', paragraph).lower().split() if word not in banned]
     print(words)
     
-    count = collections.Counter(words)
+    count = collections.Counter(words).most_common()
     print(count)
+    
+    return count[0][0]
 
 
 
@@ -16,4 +18,4 @@ if __name__ == "__main__":
     paragraph = "Bob hit a ball, the hit BALL flew far after it was hit."
     banned = ["hit"]
     
-    solution(paragraph, banned)
+    print(solution(paragraph, banned))
