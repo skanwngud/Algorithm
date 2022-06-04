@@ -6,6 +6,9 @@ import re
 def solution(paragraph, banned):
     words = [word for word in re.sub(r'[^\w]', ' ', paragraph).lower().split() if word not in banned]
     print(words)
+    
+    count = collections.Counter(words)
+    print(count)
 
 
 
