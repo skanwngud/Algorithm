@@ -7,7 +7,7 @@ cur_ip_list = {
     
     "1":
         {
-            "Name": "val1",
+            "Name": "interminds",
             "IP": "192.168.30.12",
             "anydesk": "234567890"
         }
@@ -16,32 +16,38 @@ cur_ip_list = {
 add_ip_list = {
     "0":
         {
-            "key1": "val1",
-            "key2": "val1",
-            "key3": "val12313"
+            "Name": "interminds",
+            "IP": "192.168.30.11",
+            "anydesk": "123123123"
         },
         
     "1": 
         {
-            "key1": "val1",
-            "key2": "val2",
-            "key3": "val4334"
+            "Name": "interminds",
+            "IP": "192.168.30.30",
+            "anydesk": "321321321"
         },
         
     "2":
         {
-            "key1": "val0",
-            "key2": "val223",
-            "key3": "val12312313231"
+            "Name": "interminds",
+            "IP": "192.168.30.12",
+            "anydesk": "111111111"
         }
 }
 
-print(b)
+print(cur_ip_list.values())
+print(add_ip_list.values())
 
-for idx in list(a.values()):
-    for jdx in list(b.values()):
-        if idx["key2"] == jdx["key2"]:
-            print(idx["key2"])
-            b[len(b.values())] = idx
-            
-print(b)
+c = list(cur_ip_list.values())
+a = list(add_ip_list.values())
+
+try:
+    for c_idx in cur_ip_list.items():
+        for a_idx in add_ip_list.items():
+            if a_idx[1]["IP"] != c_idx[1]["IP"]:
+                cur_ip_list[len(cur_ip_list)] = add_ip_list.pop(str(a_idx[0]))
+except Exception:
+    pass
+
+print(cur_ip_list)
